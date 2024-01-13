@@ -1,15 +1,19 @@
+import React from 'react'
+import '../App.css';
 
-import './App.css';
 import { useState } from 'react';
-import HomePage from './components/HomePage';
-import GamePage from './components/GamePage';
-import ResultsPage from './components/ResultsPage';
+import HomePage from './HomePage';
+import GamePage from './GamePage';
+import ResultsPage from './ResultsPage';
 
 let playersArr = []
 let player;
 let computer;
-function App() {
-  // const[myPlayer,setMyPlayer] = useState()
+export default function AdminPage() {
+
+
+    
+     // const[myPlayer,setMyPlayer] = useState()
   const[page,setPage] = useState(0);
 
   const onlinePage = ()=>
@@ -64,7 +68,6 @@ function App() {
         playerCheck.cards = playerCards
         setPage(1) 
       }
-      console.log(playerCheck)
   }
   
   // console.log(playersArr.find(gameStart()))
@@ -86,15 +89,13 @@ function App() {
 
 
 
-
   return (
-    <div className="App">
+    <div>
       {onlinePage()}
     </div>
-  );
+  )
 }
 
-export default App;
 
 class Player 
 {
